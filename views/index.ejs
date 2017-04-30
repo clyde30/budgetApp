@@ -11,6 +11,15 @@
     <body>
         <h1>App</h1>
 
+        <h2>Usernames</h2>        
+        <ul class="users">
+            <% for(var i=0; i<users.length; i++) {%>
+            <li class="user">
+            <span><%= users[i].name %></span>
+            </li>
+        <% } %>
+        </ul>
+
         <form action="/user" method="POST">
             <input type="text" placeholder="name" name="name">
             <button type="sumbit">submit</button>
